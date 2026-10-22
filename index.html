@@ -1,0 +1,799 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Learn practical Kannada through everyday conversations with NudiSetu."
+    />
+    <title>NudiSetu | Learn Kannada Naturally</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="navbar">
+      <a href="#" class="brand" aria-label="NudiSetu home">
+        <span class="brand-icon">ನ</span>
+        <span>NudiSetu</span>
+      </a>
+
+      <nav>
+        <a href="#learn">Learn</a>
+        <a href="#about">About</a>
+      </nav>
+
+      <a href="#learn" class="nav-button">Start Learning ↗</a>
+    </header>
+    <main>
+      <section class="dashboard" id="dashboard">
+        <div class="dashboard-heading">
+          <p class="dashboard-eyebrow">YOUR LEARNING SPACE</p>
+          <h2>Your Kannada Journey</h2>
+          <p>Small steps today, confident conversations tomorrow.</p>
+        </div>
+
+        <div class="dashboard-grid">
+          <article class="dashboard-card">
+            <span class="dashboard-icon">📚</span>
+            <p>Categories Explored</p>
+            <h3 id="dashboard-categories">0 / 6</h3>
+            <div class="dashboard-progress">
+              <div id="dashboard-progress-fill"></div>
+            </div>
+          </article>
+
+          <article class="dashboard-card">
+            <span class="dashboard-icon">🏆</span>
+            <p>Latest Quiz Score</p>
+            <h3 id="dashboard-quiz-score">Not attempted</h3>
+            <small>Complete the quiz to see your score.</small>
+          </article>
+
+          <article class="dashboard-card">
+            <span class="dashboard-icon">🌱</span>
+            <p>Learning Goal</p>
+            <h3><a href="#learn" class="goal-link">Explore all 12 ↗</a></h3>
+            <small>Discover useful Kannada for everyday life.</small>
+          </article>
+        </div>
+      </section>
+
+      <!-- NudiSetu: Personalized Learning Path -->
+      <section class="learning-path" id="learning-path">
+        <div class="learning-path-heading">
+          <span class="eyebrow">YOUR PERSONALIZED JOURNEY</span>
+          <h2>Your Kannada Learning Path 🌿</h2>
+          <p id="path-welcome">
+            Every step counts. Let's discover what you should learn next.
+          </p>
+        </div>
+
+        <div class="path-overview">
+          <div class="path-overview-icon">🧭</div>
+          <div>
+            <p class="path-small-label">YOUR NEXT STEP</p>
+            <h3 id="path-next-title">Start your Kannada journey</h3>
+            <p id="path-next-description">
+              <p id="path-why" class="path-why">
+  Why this lesson? Your next step is based on your learning progress.
+</p>
+              Begin with the essentials and build your confidence one lesson at
+              a time.
+            </p>
+            <button type="button" id="path-continue-button">
+              Start learning →
+            </button>
+          </div>
+        </div>
+
+        <div class="path-stages">
+          <!-- Beginner -->
+          <article class="path-stage" id="path-beginner">
+            <div class="path-stage-top">
+              <span class="path-stage-icon">🌱</span>
+              <span class="path-stage-status" id="path-beginner-status">
+                START HERE
+              </span>
+            </div>
+
+            <h3>Beginner</h3>
+            <p>
+              Build your foundation with essential Kannada words and phrases.
+            </p>
+
+            <div class="path-progress-track">
+              <div class="path-progress-fill" id="path-beginner-fill"></div>
+            </div>
+            <p class="path-progress-text" id="path-beginner-progress">
+              0 of 4 categories explored
+            </p>
+
+            <ul>
+              <li>Greetings</li>
+              <li>Everyday conversations</li>
+              <li>Family and numbers</li>
+            </ul>
+
+            <button
+              type="button"
+              class="path-stage-button"
+              data-path-stage="beginner"
+            >
+              Explore beginner lessons →
+            </button>
+          </article>
+
+          <!-- Intermediate -->
+          <article class="path-stage" id="path-intermediate">
+            <div class="path-stage-top">
+              <span class="path-stage-icon">🚶</span>
+              <span class="path-stage-status" id="path-intermediate-status">
+                COMING UP
+              </span>
+            </div>
+
+            <h3>Intermediate</h3>
+            <p>
+              Use Kannada in college, shops, restaurants, and while travelling.
+            </p>
+
+            <div class="path-progress-track">
+              <div class="path-progress-fill" id="path-intermediate-fill"></div>
+            </div>
+            <p class="path-progress-text" id="path-intermediate-progress">
+              0 of 4 categories explored
+            </p>
+
+            <ul>
+              <li>College life</li>
+              <li>Shopping and food</li>
+              <li>Travel and directions</li>
+            </ul>
+
+            <button
+              type="button"
+              class="path-stage-button"
+              data-path-stage="intermediate"
+            >
+              Explore intermediate lessons →
+            </button>
+          </article>
+
+          <!-- Advanced -->
+          <article class="path-stage" id="path-advanced">
+            <div class="path-stage-top">
+              <span class="path-stage-icon">🏆</span>
+              <span class="path-stage-status" id="path-advanced-status">
+                FUTURE GOAL
+              </span>
+            </div>
+
+            <h3>Advanced</h3>
+            <p>
+              Build confidence with challenging situations and cultural
+              expressions.
+            </p>
+
+            <div class="path-progress-track">
+              <div class="path-progress-fill" id="path-advanced-fill"></div>
+            </div>
+            <p class="path-progress-text" id="path-advanced-progress">
+              0 of 4 categories explored
+            </p>
+
+            <ul>
+              <li>Hospital and emergency phrases</li>
+              <li>Karnataka culture</li>
+              <li>More independent practice</li>
+            </ul>
+
+            <button
+              type="button"
+              class="path-stage-button"
+              data-path-stage="advanced"
+            >
+              Explore advanced lessons →
+            </button>
+          </article>
+        </div>
+
+        <p class="path-footer" id="path-footer" aria-live="polite">
+          Your recommendations will update as you learn.
+        </p>
+        <div id="stage-celebration" class="stage-celebration"
+     role="status" aria-live="polite" hidden>
+  <span class="stage-celebration-icon">🎉</span>
+  <div>
+    <h3 id="stage-celebration-title">Stage completed!</h3>
+    <p id="stage-celebration-message">
+      Great work! You're ready for the next stage.
+    </p>
+  </div>
+  <button type="button" id="stage-celebration-close"
+          aria-label="Dismiss celebration">✕</button>
+</div>
+      </section>
+
+      <!-- Daily Kannada Word -->
+      <section class="daily-learning" id="daily-word">
+        <div class="daily-word-card">
+          <div class="daily-word-content">
+            <span class="daily-label">✨ YOUR DAILY DOSE OF KANNADA</span>
+
+            <h2>Word of the Day</h2>
+
+            <div class="daily-kannada-word" id="daily-kannada-word">
+              ಧನ್ಯವಾದಗಳು
+            </div>
+
+            <p class="daily-pronunciation" id="daily-pronunciation">
+              Dhanyavaadagalu
+            </p>
+
+            <p class="daily-meaning" id="daily-meaning">Meaning: Thank you</p>
+
+            <p class="daily-example" id="daily-example">
+              Example: ನಿಮ್ಮ ಸಹಾಯಕ್ಕೆ ಧನ್ಯವಾದಗಳು!
+            </p>
+
+            <p class="daily-translation" id="daily-translation">
+              Nimma sahaayakke dhanyavaadagalu! · Thank you for your help!
+            </p>
+            <div class="voice-assistant">
+              <button id="speak-word-button" type="button">
+                🔊 Listen to Kannada
+              </button>
+
+              <button id="voice-command-button" type="button">
+                🎤 Talk to NudiSetu
+              </button>
+
+              <p id="voice-status" aria-live="polite">
+                Tap a button to get started!
+              </p>
+            </div>
+          </div>
+
+          <!-- NudiSetu: Kannada Speaking Practice -->
+          <section class="speaking-practice" id="speaking-practice">
+            <div class="speaking-heading">
+              <span class="eyebrow">SPEAK WITH CONFIDENCE</span>
+              <h2>Kannada Speaking Studio 🎙️</h2>
+              <p>Listen, speak, and practise Kannada one phrase at a time.</p>
+            </div>
+
+            <div class="speaking-card">
+              <label for="speaking-phrase-select">
+                Choose a phrase to practise
+              </label>
+
+              <select id="speaking-phrase-select">
+                <option
+                  value="ನನಗೆ ಇದು ಅರ್ಥವಾಗಲಿಲ್ಲ"
+                  data-meaning="I didn't understand this."
+                >
+                  ನನಗೆ ಇದು ಅರ್ಥವಾಗಲಿಲ್ಲ — I didn't understand this.
+                </option>
+                <option
+                  value="ಸ್ವಲ್ಪ ನಿಧಾನವಾಗಿ ಮಾತನಾಡಿ"
+                  data-meaning="Please speak a little slowly."
+                >
+                  ಸ್ವಲ್ಪ ನಿಧಾನವಾಗಿ ಮಾತನಾಡಿ — Please speak slowly.
+                </option>
+                <option
+                  value="ಇಲ್ಲಿಗೆ ಹೋಗಲು ಎಷ್ಟು ಸಮಯ ಬೇಕು"
+                  data-meaning="How long does it take to get there?"
+                >
+                  ಇಲ್ಲಿಗೆ ಹೋಗಲು ಎಷ್ಟು ಸಮಯ ಬೇಕು — How long to get there?
+                </option>
+                <option value="ನಾನು ದಾರಿ ತಪ್ಪಿದ್ದೇನೆ" data-meaning="I am lost.">
+                  ನಾನು ದಾರಿ ತಪ್ಪಿದ್ದೇನೆ — I am lost.
+                </option>
+                <option
+                  value="ಇದರ ಬೆಲೆ ಎಷ್ಟು"
+                  data-meaning="How much does this cost?"
+                >
+                  ಇದರ ಬೆಲೆ ಎಷ್ಟು — How much does this cost?
+                </option>
+                <option
+                  value="ನಾನು ಸಸ್ಯಾಹಾರಿ"
+                  data-meaning="I am a vegetarian."
+                >
+                  ನಾನು ಸಸ್ಯಾಹಾರಿ — I am a vegetarian.
+                </option>
+                <option
+                  value="ನನಗೆ ರೈಲು ನಿಲ್ದಾಣಕ್ಕೆ ಹೋಗಬೇಕು"
+                  data-meaning="I need to go to the railway station."
+                >
+                  ನನಗೆ ರೈಲು ನಿಲ್ದಾಣಕ್ಕೆ ಹೋಗಬೇಕು — I need to go to the railway
+                  station.
+                </option>
+                <option
+                  value="ನೀವು ನನಗೆ ಸಹಾಯ ಮಾಡಬಹುದೇ"
+                  data-meaning="Could you help me?"
+                >
+                  ನೀವು ನನಗೆ ಸಹಾಯ ಮಾಡಬಹುದೇ — Could you help me?
+                </option>
+                <option
+                  value="ನಾನು ಕನ್ನಡ ಕಲಿಯುತ್ತಿದ್ದೇನೆ"
+                  data-meaning="I am learning Kannada."
+                >
+                  ನಾನು ಕನ್ನಡ ಕಲಿಯುತ್ತಿದ್ದೇನೆ — I am learning Kannada.
+                </option>
+                <option
+                  value="ದಯವಿಟ್ಟು ನನಗೆ ಮತ್ತೆ ಹೇಳಿ"
+                  data-meaning="Please tell me again."
+                >
+                  ದಯವಿಟ್ಟು ನನಗೆ ಮತ್ತೆ ಹೇಳಿ — Please tell me again.
+                </option>
+                <option
+                  value="ನಾನು ಇಲ್ಲಿ ಮೊದಲ ಬಾರಿಗೆ ಬಂದಿದ್ದೇನೆ"
+                  data-meaning="I am here for the first time."
+                >
+                  ನಾನು ಇಲ್ಲಿ ಮೊದಲ ಬಾರಿಗೆ ಬಂದಿದ್ದೇನೆ — I am here for the first
+                  time.
+                </option>
+                <option value="ಇದು ಯಾವ ಬಸ್" data-meaning="Which bus is this?">
+                  ಇದು ಯಾವ ಬಸ್ — Which bus is this?
+                </option>
+              </select>
+
+              <div class="speaking-target">
+                <p class="speaking-label">YOUR TARGET PHRASE</p>
+                <h3 id="speaking-target-text">ನಮಸ್ಕಾರ</h3>
+                <p id="speaking-target-meaning">Meaning: Hello</p>
+              </div>
+
+              <div class="speaking-actions">
+                <button type="button" id="speaking-listen-button">
+                  🔊 Listen first
+                </button>
+
+                <button type="button" id="speaking-start-button">
+                  🎙️ Start speaking
+                </button>
+              </div>
+
+              <p id="speaking-status" aria-live="polite">
+                Select a phrase and listen before speaking.
+              </p>
+
+              <div class="speaking-result" id="speaking-result" hidden>
+                <p class="speaking-label">WHAT WE HEARD</p>
+                <p id="speaking-recognized-text"></p>
+                <p id="speaking-feedback" aria-live="polite"></p>
+
+                <button type="button" id="speaking-retry-button">
+                  ↻ Try again
+                </button>
+              </div>
+
+              <p class="speaking-note">
+                Microphone access is required. Speech recognition depends on
+                your browser and may not be available in every language or
+                device.
+              </p>
+            </div>
+          </section>
+
+          <div class="learning-streak-card">
+            <span class="streak-icon">🔥</span>
+            <p class="streak-label">YOUR LEARNING STREAK</p>
+            <h3><span id="learning-streak-count">0</span> Days</h3>
+            <p class="streak-message">Keep learning a little every day!</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- NudiSetu: Badges, Culture and Daily Challenge -->
+      <section class="rewards-section" id="rewards">
+        <div class="section-heading">
+          <span class="eyebrow">YOUR KANNADA JOURNEY</span>
+          <h2>Badges & Cultural Rewards</h2>
+          <p>Celebrate your progress and discover Karnataka's heritage.</p>
+        </div>
+
+        <div class="reward-grid">
+          <article class="reward-card" id="badge-explorer">
+            <div class="reward-icon">🏛️</div>
+            <h3>Namma Bengaluru Explorer</h3>
+            <p>Explore 3 different learning categories.</p>
+            <span class="badge-status" id="explorer-status">Locked 🔒</span>
+          </article>
+
+          <article class="reward-card" id="badge-warrior">
+            <div class="reward-icon">⚔️</div>
+            <h3>Kannada Learning Warrior</h3>
+            <p>Complete all 4 quiz levels.</p>
+            <span class="badge-status" id="warrior-status">Locked 🔒</span>
+          </article>
+
+          <article class="reward-card" id="badge-culture">
+            <div class="reward-icon">🎭</div>
+            <h3>Karnataka Culture Keeper</h3>
+            <p>Explore 5 categories, including Karnataka & Culture.</p>
+            <span class="badge-status" id="culture-status">Locked 🔒</span>
+          </article>
+        </div>
+
+        <div class="culture-fact-card">
+          <span class="eyebrow">DID YOU KNOW?</span>
+          <h3>✨ Karnataka Culture Corner</h3>
+          <p id="culture-fact">
+            Mysuru Dasara is a famous festival celebrated in Karnataka.
+          </p>
+          <button type="button" class="secondary-button" id="next-culture-fact">
+            Discover another fact ↻
+          </button>
+        </div>
+
+        <div class="daily-challenge-card">
+          <span class="eyebrow">DAILY KANNADA CHALLENGE</span>
+          <h2>Word of the Day</h2>
+          <p id="daily-word" class="daily-word">ನಮಸ್ಕಾರ</p>
+          <p id="daily-pronunciation">Namaskaara</p>
+          <p id="daily-question">What does this Kannada word mean?</p>
+
+          <div id="daily-options" class="daily-options"></div>
+          <p id="daily-feedback" aria-live="polite"></p>
+          <p id="daily-score">Challenges completed: 0</p>
+        </div>
+      </section>
+
+      <section class="hero" id="about">
+        <div class="hero-content">
+          <span class="eyebrow">YOUR JOURNEY INTO KANNADA</span>
+
+          <h1>Every word brings us <span>closer.</span></h1>
+
+          <p class="hero-description">
+            New to Karnataka? Learn Kannada through real-life conversations,
+            useful phrases, and little everyday victories.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#learn" class="primary-button">Start your journey →</a>
+            <span class="hero-note">ನಮಸ್ಕಾರ! · Namaskara!</span>
+          </div>
+
+          <div class="hero-stats">
+            <div>
+              <strong>Real-life</strong>
+              <span>Conversations</span>
+            </div>
+            <div>
+              <strong>Your pace</strong>
+              <span>Learn anytime</span>
+            </div>
+            <div>
+              <strong>For everyone</strong>
+              <span>Beginner friendly</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-label="Kannada learning illustration">
+          <div class="decor decor-one">ಅ</div>
+          <div class="decor decor-two">ಆ</div>
+
+          <div class="language-card">
+            <span class="card-label">YOUR FIRST KANNADA WORD</span>
+            <div class="big-kannada">ನಮಸ್ಕಾರ</div>
+            <p class="transliteration">Namaskara</p>
+            <div class="meaning-pill">Hello / Greetings</div>
+            <div class="card-divider"></div>
+            <p class="welcome-message">
+              Every conversation starts somewhere. Start yours here.
+            </p>
+            <span class="flower">✿</span>
+          </div>
+
+          <div class="floating-note">
+            <span class="online-dot"></span>
+            One word at a time
+          </div>
+        </div>
+      </section>
+
+      <section class="learning-section" id="learn">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">LEARN BY LIVING</span>
+            <h2>Where do you want to <span>begin?</span></h2>
+            <p>Choose a situation. Learn the words. Use them in real life.</p>
+          </div>
+          <span class="section-mark">ನಮ್ಮ ನುಡಿ</span>
+        </div>
+        <p id="learning-progress" class="progress-text">
+          0 of 12 learning categories explored
+        </p>
+        <div class="category-grid">
+          <button class="category-card travel" data-category="travel">
+            <span class="category-icon">↗</span>
+            <span class="category-number">01 / EXPLORE</span>
+            <strong>Getting Around</strong>
+            <span class="category-description">
+              Buses, directions and getting to your destination.
+            </span>
+            <span class="category-kannada"> ದಾರಿ · ದಿಕ್ಕು · ಪ್ರಯಾಣ </span>
+            <span class="card-link">Explore phrases →</span>
+          </button>
+
+          <button class="category-card college" data-category="college">
+            <span class="category-icon">✳</span>
+            <span class="category-number">02 / CONNECT</span>
+            <strong>College Life</strong>
+            <span class="category-description">
+              Meet classmates and find your way around campus.
+            </span>
+            <span class="category-kannada">ಗೆಳೆಯರು · ತರಗತಿ · ಕಾಲೇಜು</span>
+            <span class="card-link">Explore phrases →</span>
+          </button>
+
+          <button class="category-card shopping" data-category="shopping">
+            <span class="category-icon">◇</span>
+            <span class="category-number">03 / EVERYDAY</span>
+            <strong>Shopping</strong>
+            <span class="category-description">
+              Ask prices, find things and shop with confidence.
+            </span>
+            <span class="category-kannada">ಬೆಲೆ · ಅಂಗಡಿ · ಹಣ</span>
+            <span class="card-link">Explore phrases →</span>
+          </button>
+
+          <button class="category-card food" data-category="food">
+            <span class="category-icon">♡</span>
+            <span class="category-number">04 / TASTE</span>
+            <strong>Food & Cafés</strong>
+            <span class="category-description">
+              Meet classmates and find your way around campus.
+            </span>
+            <span class="category-kannada">ಗೆಳೆಯರು · ತರಗತಿ · ಕಾಲೇಜು</span>
+            <span class="card-link">Explore phrases →</span>
+          </button>
+
+          <button class="category-card health" data-category="hospital">
+            <span class="category-icon">＋</span>
+            <span class="category-number">05 / GET HELP</span>
+            <strong>Hospital & Help</strong>
+            <span class="category-description">
+              Communicate basic needs when you need assistance.
+            </span>
+            <span class="category-kannada">ವೈದ್ಯರು · ಔಷಧಿ · ಸಹಾಯ</span>
+            <span class="card-link">Explore phrases →</span>
+          </button>
+
+          <button class="category-card people" data-category="everyday">
+            <span class="category-icon">☼</span>
+            <span class="category-number">06 / SAY HELLO</span>
+            <strong>Everyday Conversations</strong>
+            <span class="category-description">
+              Greetings, introductions and friendly conversations.
+            </span>
+            <span class="category-kannada">ಮಾತು · ಸ್ನೇಹ · ಪರಿಚಯ</span>
+            <span class="card-link">Explore phrases →</span>
+          </button>
+
+          <button class="category-card travel" data-category="greetings">
+            <span class="category-icon">👋</span>
+            <span class="category-number">07 / GREETINGS</span>
+            <strong>Greetings & Introductions</strong>
+            <span class="category-description">
+              Say hello, introduce yourself and meet new people.
+            </span>
+            <span class="category-kannada">ನಮಸ್ಕಾರ · ಸ್ವಾಗತ · ವಂದನೆ</span>
+            <span class="card-link">Explore phrases →</span>
+          </button>
+
+          <button class="category-card college" data-category="family">
+            <span class="category-icon">♡</span>
+            <span class="category-number">08 / FAMILY</span>
+            <strong>Family & Relationships</strong>
+            <span class="category-description">
+              Talk about family members and the people you love.
+            </span>
+            <span class="category-kannada">ಕುಟುಂಬ · ಪ್ರೀತಿ · ಸಂಬಂಧ</span>
+            <span class="card-link">Explore phrases →</span>
+          </button>
+
+          <button class="category-card food" data-category="numbers">
+            <span class="category-icon">#</span>
+            <span class="category-number">09 / NUMBERS</span>
+            <strong>Numbers & Time</strong>
+            <span class="category-description">
+              Learn numbers, ask the time and discuss dates.
+            </span>
+            <span class="category-kannada">ಸಂಖ್ಯೆ · ಸಮಯ · ದಿನಾಂಕ</span>
+            <span class="card-link">Explore phrases →</span>
+          </button>
+
+          <button class="category-card shopping" data-category="home">
+            <span class="category-icon">⌂</span>
+            <span class="category-number">10 / HOME</span>
+            <strong>Home & Daily Routine</strong>
+            <span class="category-description">
+              Describe your home and talk about daily activities.
+            </span>
+            <span class="category-kannada">ಮನೆ · ಕೆಲಸ · ದಿನಚರಿ</span>
+            <span class="card-link">Explore phrases →</span>
+          </button>
+
+          <button class="category-card health" data-category="emergency">
+            <span class="category-icon">!</span>
+            <span class="category-number">11 / SAFETY</span>
+            <strong>Emergency & Safety</strong>
+            <span class="category-description">
+              Ask for urgent help and communicate important needs.
+            </span>
+            <span class="category-kannada">ತುರ್ತು · ಸುರಕ್ಷತೆ · ರಕ್ಷಣೆ</span>
+            <span class="card-link">Explore phrases →</span>
+          </button>
+
+          <button class="category-card people" data-category="culture">
+            <span class="category-icon">✦</span>
+            <span class="category-number">12 / CULTURE</span>
+            <strong>Karnataka & Culture</strong>
+            <span class="category-description">
+              Discover Kannada customs, festivals and local expressions.
+            </span>
+            <span class="category-kannada">ಸಂಸ್ಕೃತಿ · ಹಬ್ಬ · ಪರಂಪರೆ</span>
+            <span class="card-link">Explore phrases →</span>
+          </button>
+        </div>
+
+        <div class="lesson-panel" id="lesson-panel" hidden>
+          <div class="lesson-header">
+            <div>
+              <span class="eyebrow">YOUR FIRST LESSON</span>
+              <h3 id="lesson-title">Let's learn Kannada</h3>
+            </div>
+            <button
+              class="close-button"
+              id="close-lesson"
+              aria-label="Close lesson"
+            >
+              ✕
+            </button>
+          </div>
+          <p id="lesson-intro"></p>
+          <div id="phrase-list" class="phrase-list"></div>
+
+          <div class="conversation-practice" id="conversation-practice">
+            <span class="eyebrow">REAL-LIFE PRACTICE</span>
+            <h4>Let's practise a conversation!</h4>
+            <p id="conversation-situation">
+              Imagine you are asking for directions in Karnataka.
+            </p>
+
+            <div class="conversation-card">
+              <p class="conversation-label">SAY THIS IN KANNADA</p>
+              <h3 id="conversation-kannada">ಬಸ್ ನಿಲ್ದಾಣ ಎಲ್ಲಿದೆ?</h3>
+              <p id="conversation-pronunciation">Bus nildaana ellide?</p>
+              <p id="conversation-meaning">Where is the bus stop?</p>
+
+              <button
+                type="button"
+                class="primary-button"
+                id="conversation-speak"
+              >
+                🔊 Listen to Kannada
+              </button>
+            </div>
+
+            <div class="conversation-question">
+              <h4>Quick practice</h4>
+              <p id="conversation-question-text">
+                What does "ಬಸ್ ನಿಲ್ದಾಣ ಎಲ್ಲಿದೆ?" mean?
+              </p>
+              <div class="conversation-options" id="conversation-options">
+                <button type="button" class="conversation-option">
+                  Where is the bus stop?
+                </button>
+                <button type="button" class="conversation-option">
+                  How much is the bus ticket?
+                </button>
+                <button type="button" class="conversation-option">
+                  I want some water.
+                </button>
+              </div>
+
+              <p id="conversation-feedback" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <p class="lesson-tip">
+            Tip: Read the Kannada phrase aloud, then try using it in a real
+            conversation.
+          </p>
+        </div>
+      </section>
+
+      <section class="closing-section">
+        <span class="closing-kannada">ಬನ್ನಿ, ಕನ್ನಡ ಕಲಿಯೋಣ!</span>
+        <h2>Come on, let's learn Kannada.</h2>
+        <p>A new language. New connections. A little more belonging.</p>
+        <a href="#learn" class="primary-button">Choose your first lesson →</a>
+      </section>
+    </main>
+
+    <section class="quiz-section" id="quiz-levels">
+      <div class="quiz-box">
+        <span class="eyebrow">YOUR KANNADA JOURNEY</span>
+        <h2>Choose your <span>level</span></h2>
+        <p>Solve quizzes, unlock new levels, and grow your Kannada skills.</p>
+
+        <div class="quiz-level-grid">
+          <article class="quiz-level-card active">
+            <span class="level-number">LEVEL 1</span>
+            <h3>Beginner</h3>
+            <p>🌱 Basic words, greetings and everyday phrases.</p>
+            <p class="level-status">Score 3/5 to unlock Level 2</p>
+            <button class="primary-button" id="start-level-1">
+              Start Quiz →
+            </button>
+          </article>
+
+          <article class="quiz-level-card locked" id="level-card-2">
+            <span class="level-number">LEVEL 2</span>
+            <h3>Elementary</h3>
+            <div class="level-illustration">📖</div>
+            <p>Daily conversations, useful phrases and numbers.</p>
+            <p class="level-status">🔒 Solve Level 1 to unlock</p>
+            <button class="primary-button" disabled>Locked</button>
+          </article>
+
+          <article class="quiz-level-card locked" id="level-card-3">
+            <span class="level-number">LEVEL 3</span>
+            <h3>Intermediate</h3>
+            <div class="level-illustration">🧠</div>
+            <p>Sentence meanings, context and natural replies.</p>
+            <p class="level-status">🔒 Solve Level 2 to unlock</p>
+            <button class="primary-button" disabled>Locked</button>
+          </article>
+
+          <article class="quiz-level-card locked" id="level-card-4">
+            <span class="level-number">LEVEL 4</span>
+            <h3>Advanced</h3>
+            <div class="level-illustration">🏆</div>
+            <p>Grammar, sentence construction and tricky situations.</p>
+            <p class="level-status">🔒 Solve Level 3 to unlock</p>
+            <button class="primary-button" disabled>Locked</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="quiz-section" id="quiz">
+      <div class="quiz-box">
+        <span class="eyebrow">TEST YOURSELF</span>
+        <h2>Ready for a little <span>challenge?</span></h2>
+        <p>
+          Learn a phrase, choose the right meaning, and build your confidence.
+        </p>
+
+        <div class="quiz-card">
+          <span id="quiz-progress">QUESTION 1</span>
+          <h3 id="quiz-question">What does ನಮಸ್ಕಾರ mean?</h3>
+
+          <div id="quiz-options" class="quiz-options"></div>
+
+          <p id="quiz-feedback" aria-live="polite"></p>
+
+          <button id="next-question" class="primary-button" hidden>
+            Next question →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <a href="#" class="brand footer-brand">
+        <span class="brand-icon">ನ</span>
+        <span>NudiSetu</span>
+      </a>
+      <p>Breaking Language Barriers, One Word at a Time.</p>
+      <span>Made with care for language learners.</span>
+    </footer>
+  </body>
+</html>
